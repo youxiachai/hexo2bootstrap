@@ -1,0 +1,30 @@
+<script type="text/javascript">
+    var fistRun = true;
+    function pageselectCallback(page_index, jq) {
+        if(fistRun){
+            fistRun = false;
+        }else{
+            if(page_index === 0){
+                window.location.href = "<%- config.root %>";
+            }else{
+                window.location.href = "<%- config.root %>page/" + (page_index + 1) + "/";
+            }
+            console.log("xxx-->" + page_index);
+        }
+    }
+
+    $(document).ready(function () {
+        var totalPage = '<%= page.total %>' * '<%= page.per_page%>';
+        var currentPage = '<%= page.current%>' - 1;
+        $("#Pagination").pagination(totalPage, {
+            items_per_page: '<%= page.per_page%>',
+            current_page: currentPage,
+            callback: pageselectCallback
+        });
+    });
+</script>
+<div class="pagination" id="Pagination">
+
+</div>
+
+

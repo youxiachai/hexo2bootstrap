@@ -1,0 +1,25 @@
+<div class="content">
+    <header>
+
+
+        <div class="icon"></div>
+        <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%=
+            item.date.format(config.date_format) %></a></time>
+
+        <%- partial('../_partial/title') %>
+    </header>
+    <div class="entry">
+        <% if (item.excerpt){ %>
+        <%- item.excerpt %>
+        <% } else { %>
+        <%- item.content %>
+        <% } %>
+    </div>
+    <footer>
+        <% if (item.excerpt){ %>
+        <div class="alignleft">
+            <a href="<%- config.root %><%- item.path %>#more" class="more-link"><%= __('more') %></a>
+        </div>
+        <% } %>
+    </footer>
+</div>

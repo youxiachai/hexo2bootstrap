@@ -1,0 +1,18 @@
+menu:
+  home: /
+weibo:
+  enable: true
+
+widgets:
+- weibo
+
+duoshuo:
+  enable: true
+  shortName: youxiachai
+
+youyan:
+  enable: true
+  UYUserId: 1567310
+
+
+
