@@ -1,10 +1,9 @@
 menu:
   home: /
-weibo:
-  enable: true
-
-widgets:
-- weibo
+blogs:
+  cnblogs: http://www.cnblogs.com/youxilua/
+  51cto: http://youxilua.blog.51cto.com/
+  oschina: http://my.oschina.net/youxiachai
 
 duoshuo:
   enable: true
@@ -13,6 +12,21 @@ duoshuo:
 youyan:
   enable: true
   UYUserId: 1567310
+
+weibo:
+  enable: true
+  uid: 1312972820
+
+baidu:
+  enable: true
+  id: 75f5de70aa60d9d2b194636cd8b7b621
+
+jiathis:
+  enable: true
+  uid: 1567310
+
+google:
+  enable: false
 
 
 

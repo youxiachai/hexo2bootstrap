@@ -4,7 +4,7 @@
         <div class="icon"></div>
         <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
         <% } %>
-        <%- partial('../_partial/title') %>
+        <%- partial('../_component/common/title') %>
     </header>
     <div class="entry" id="<%= item.layout %>">
         <%- item.content %>
@@ -12,8 +12,5 @@
     </div>
 
 
-    <div class="hidden-phone widget">
-        <%- partial('../_widget/jiathis') %>
-        <%- partial('../_widget/duoshuo') %>
-    </div>
+
 </div>

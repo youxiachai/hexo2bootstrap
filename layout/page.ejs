@@ -1,1 +1,13 @@
-<%- partial('_pagelayout/article', {item: page, index: false}) %>
+<div class="container-fluid" style="margin-top: 60px">
+    <div class="row-fluid">
+        <div class="span9">
+            <%- partial('_pagelayout/article', {item: page, index: false}) %>
+        </div>
+
+        <div class="span3 hidden-phone">
+            <%- partial('_component/donation/alipay')%>
+
+        </div>
+    </div>
+
+</div>

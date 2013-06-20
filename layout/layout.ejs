@@ -1,25 +1,13 @@
-<%- partial('_basiclayout/head') %>
+<%- partial('_component/common/head') %>
 
 <body>
 <!--导航 -->
-<%- partial('_basiclayout/navbarhead') %>
+<%- partial('_component/bootstrap/topfixnavbar') %>
 <!-- 内容 -->
-<div class="container-fluid" style="margin-top: 60px">
-    <div class="row-fluid">
-        <div class="span9">
-            <%- body %>
-        </div>
+<%- body %>
 
-        <div class="span3 hidden-phone">
-            <%- partial('_basiclayout/navbarright') %>
-        </div>
-    </div>
+<%- partial('_component/common/footer') %>
 
-</div>
-
-<%- partial('_basiclayout/footer') %>
-<%- partial('_basiclayout/after_footer') %>
-
-
+<%- partial('_component/plugins/analytics/baidu')%>
 </body>
 </html>

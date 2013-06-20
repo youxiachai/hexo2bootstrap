@@ -1,5 +1,17 @@
-<% page.posts.each(function(item){ %>
-<%- partial('_basiclayout/list', {item: item, index: true}) %>
-<% }); %>
+<div class="container-fluid" style="margin-top: 60px">
+    <div class="row-fluid">
+        <div class="span9">
+            <% page.posts.each(function(item){ %>
+            <%- partial('_component/common/list', {item: item, index: true}) %>
+            <% }); %>
+        </div>
+
+        <div class="span3 hidden-phone">
+            <%- partial('_component/donation/alipay') %>
+
+        </div>
+    </div>
+
+</div>
 <!-- 分页 -->
-<%- partial('_partial/pagination') %>
+<%- partial('_component/bootstrap/pagination') %>

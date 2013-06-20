@@ -6,7 +6,7 @@
         <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%=
             item.date.format(config.date_format) %></a></time>
 
-        <%- partial('../_partial/title') %>
+        <%- partial('./title') %>
     </header>
     <div class="entry">
         <% if (item.excerpt){ %>

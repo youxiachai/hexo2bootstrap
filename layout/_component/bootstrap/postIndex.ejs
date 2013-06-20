@@ -1,16 +1,9 @@
-<% if (page.layout === 'post'){  %>
-
 <div id="menuIndex"></div>
+<script src="<%- config.root %>js/jquery.menuindex.js"></script>
 <script type="text/javascript">
+
     $('#menuIndex').menuIndex({content: '#<%= page.layout%>'
         ,ulClass: "span3 nav nav-list widget affix"});
     $('body').scrollspy({offset:100});
 
 </script>
-<% }else{ %>
-
-<% theme.widgets.forEach(function(widget){ %>
-
-<%- partial('../_widget/' + widget) %>
-<% }); %>
-<% } %>
